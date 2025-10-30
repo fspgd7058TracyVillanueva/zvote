@@ -1,0 +1,32 @@
+{
+  "name": "fhevote-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for FHEVote - Privacy-preserving voting system",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:local": "hardhat run scripts/deploy.js --network hardhat",
+    "verify": "hardhat verify --network sepolia"
+  },
+  "keywords": [
+    "fhe",
+    "voting",
+    "privacy",
+    "encryption",
+    "blockchain",
+    "ethereum",
+    "democracy"
+  ],
+  "author": "FHEVote Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.0.0"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "fhevote",
+  "version": "1.0.0",
+  "description": "Privacy-preserving voting system using Fully Homomorphic Encryption",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm run install:contracts && npm run install:frontend && npm run install:backend",
+    "install:contracts": "cd contracts && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "build:contracts": "cd contracts && npm run compile",
+    "build:frontend": "cd frontend && npm run build",
+    "deploy:contracts": "cd contracts && npm run deploy:sepolia",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "test": "npm run test:contracts && npm run test:frontend && npm run test:backend",
+    "test:contracts": "cd contracts && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && npm test",
+    "clean": "rm -rf node_modules contracts/node_modules frontend/node_modules backend/node_modules",
+    "setup": "npm run install:all && npm run build:contracts"
+  },
+  "keywords": [
+    "fhe",
+    "homomorphic encryption",
+    "voting",
+    "privacy",
+    "blockchain",
+    "ethereum",
+    "react",
+    "typescript",
+    "democracy"
+  ],
+  "author": "FHEVote Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "contracts",
+    "frontend",
+    "backend"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/fhevote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/fhevote/issues"
+  },
+  "homepage": "https://github.com/your-username/fhevote#readme"
+}
